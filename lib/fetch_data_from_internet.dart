@@ -89,7 +89,12 @@ class _FetchDataState extends State<FetchData> {
             future: futureAlbum,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data.title);
+                return Text("Title: " +
+                    snapshot.data.title +
+                    "\n ID: " +
+                    snapshot.data.id.toString() +
+                    "\n user ID:" +
+                    snapshot.data.id.toString());
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
